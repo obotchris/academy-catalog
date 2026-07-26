@@ -1,0 +1,50 @@
+name: Synthetic PII
+entryKey: academy-synthetic-pii
+serverUserType: singleUser
+shortDescription: Query a table of entirely fake customer PII (names, emails, driving licence numbers) for filtering demos
+description: |
+  A Model Context Protocol (MCP) server that serves **entirely synthetic** customer
+  records — names, email addresses, and UK-style driving licence numbers — over the
+  streamable-HTTP transport.
+
+  It exists purely as a demo target for showing PII filtering / redaction through an
+  Obot gateway. None of the data refers to real people: names are drawn from fixed
+  pools, emails use the reserved `example.com` domain, and licence numbers only mimic
+  the DVLA format without being valid.
+
+  ## Features
+
+  - **List records**: Return synthetic customer records (name, email, driving licence)
+
+  - **Search records**: Filter records by a name or email substring
+
+  - **Fetch one record**: Look up a single record by id
+
+  - **Deterministic data**: The dataset is seeded, so the same query returns the same
+    hits every time — ideal for a repeatable before/after filtering demo
+
+  ## What you'll need to connect
+
+  **No Setup Required**: The server runs with open access and needs no API keys or
+  configuration. Ensure the gateway can reach the server's URL on your network.
+metadata:
+  categories: Demo
+icon: https://avatars.githubusercontent.com/u/143242777?s=200&v=4
+repoURL: https://github.com/obotchris/academy-catalog
+env: []
+runtime: remote
+remoteConfig:
+  fixedURL: http://192.168.0.23:8000/mcp
+toolPreview:
+- name: list_customers
+  description: Return synthetic customer records (name, email, driving licence).
+  params:
+    limit: Maximum number of records to return (1-50).
+- name: search_customers
+  description: Search synthetic customer records by name or email substring.
+  params:
+    query: Case-insensitive substring to match against name or email.
+- name: get_customer
+  description: Fetch a single synthetic customer record by id.
+  params:
+    customer_id: The record id (1-50).
