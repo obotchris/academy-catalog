@@ -34,7 +34,7 @@ repoURL: https://github.com/obotchris/academy-catalog
 env: []
 runtime: remote
 remoteConfig:
-  fixedURL: http://192.168.0.23:8000/mcp
+  fixedURL: https://pii.stardock.uk/mcp
 toolPreview:
 - name: list_customers
   description: Return synthetic customer records (name, email, driving licence).
