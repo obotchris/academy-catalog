@@ -1,20 +1,20 @@
 name: Synthetic PII
 entryKey: academy-synthetic-pii
 serverUserType: singleUser
-shortDescription: Query a table of entirely fake customer PII (names, emails, driving licence numbers) for filtering demos
+shortDescription: Query a table of entirely fake customer PII (names, emails, US driver's license numbers) for filtering demos
 description: |
   A Model Context Protocol (MCP) server that serves **entirely synthetic** customer
-  records — names, email addresses, and UK-style driving licence numbers — over the
+  records — names, email addresses, and US-style driver's license numbers — over the
   streamable-HTTP transport.
 
   It exists purely as a demo target for showing PII filtering / redaction through an
   Obot gateway. None of the data refers to real people: names are drawn from fixed
-  pools, emails use the reserved `example.com` domain, and licence numbers only mimic
-  the DVLA format without being valid.
+  pools, emails use the reserved `example.com` domain, and license numbers only mimic
+  real US state DMV formats without being valid.
 
   ## Features
 
-  - **List records**: Return synthetic customer records (name, email, driving licence)
+  - **List records**: Return synthetic customer records (name, email, driver's license)
 
   - **Search records**: Filter records by a name or email substring
 
@@ -37,7 +37,7 @@ remoteConfig:
   fixedURL: https://pii.stardock.uk/mcp
 toolPreview:
 - name: list_customers
-  description: Return synthetic customer records (name, email, driving licence).
+  description: Return synthetic customer records (name, email, driver's license).
   params:
     limit: Maximum number of records to return (1-50).
 - name: search_customers

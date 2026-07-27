@@ -11,7 +11,7 @@ The entry format mirrors the
 
 | Entry | Description |
 |-------|-------------|
-| [`synthetic-pii.yaml`](./synthetic-pii.yaml) | Serves entirely fake customer PII (names, emails, driving licence numbers) — a demo target for showing PII filtering / redaction. |
+| [`synthetic-pii.yaml`](./synthetic-pii.yaml) | Serves entirely fake customer PII (names, emails, US driver's license numbers) — a demo target for showing PII filtering / redaction. |
 
 ## Using this catalog with an Obot gateway
 
