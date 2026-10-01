@@ -1,6 +1,5 @@
 name: Customer Demo Data
 entryKey: academy-synthetic-pii
-serverUserType: singleUser
 shortDescription: Query a table of entirely fake customer PII (names, emails, US driver's license numbers) for filtering demos
 description: |
   A Model Context Protocol (MCP) server that serves **entirely synthetic** customer
