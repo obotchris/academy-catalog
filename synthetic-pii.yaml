@@ -31,7 +31,6 @@ metadata:
   categories: Demo
 icon: https://avatars.githubusercontent.com/u/143242777?s=200&v=4
 repoURL: https://github.com/obotchris/academy-catalog
-env: []
 runtime: remote
 remoteConfig:
   fixedURL: https://pii.obotacademy.net/mcp
